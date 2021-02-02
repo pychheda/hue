@@ -537,7 +537,7 @@ class Assist(object):
     return self.db.get_schema_names()
 
   def get_tables(self, database, table_names=[]):
-    return self.db.get_table_names(database)
+    return self.db.get_table_names(database) + self.db.get_view_names(database)
 
   def get_columns(self, database, table):
     return self.db.get_columns(table, database)
